@@ -50,7 +50,7 @@ logger = logging.getLogger("GeniControl")
 
 
 dataReqValues = (
-    "act_mode1", "act_mode2", "act_mode3", "led_contr", "ref_act", "ref_inf", "ref_att_loc", "sys_ref", "h", "q",
+    "act_mode1", "act_mode2", "act_mode3", "led_contr", "ref_act", "ref_norm","ref_att_loc", "sys_ref", "h", "q",
     "h_max", "q_max", "t_2hour_hi", "t_2hour_lo", "contr_source", "p", "energy_hi", "energy_lo", "speed_hi", "speed_lo",
     "curve_no_ref", "alarm_code", "alarm_log_1", "alarm_log_2", "alarm_log_3", "alarm_log_4", "alarm_log_5"
 )
