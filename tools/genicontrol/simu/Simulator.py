@@ -50,7 +50,7 @@ logger = logging.getLogger("GeniControl")
 
 
 dataReqValues = (
-    "act_mode1", "act_mode2", "act_mode3", "led_contr", "ref_act", "ref_norm","ref_att_loc", "sys_ref", "h", "q",
+    "act_mode1", "act_mode2", "act_mode3", "led_contr", "ref_act","ref_inf","ref_norm","ref_att_loc", "sys_ref", "h", "q",
     "h_max", "q_max", "t_2hour_hi", "t_2hour_lo", "contr_source", "p", "energy_hi", "energy_lo", "speed_hi", "speed_lo",
     "curve_no_ref", "alarm_code", "alarm_log_1", "alarm_log_2", "alarm_log_3", "alarm_log_4", "alarm_log_5"
 )
@@ -85,7 +85,7 @@ DATA_POOL = { # This dictionary is used to 'simulate' communication.
         Item(u"act_mode3", 0x10,         Info(0x81, None, None, None)),
         Item(u"led_contr", 0x01,         Info(0x81, None, None, None)),
         Item(u"ref_act", 0xa5,           Info(0x82, 0x19, 0x00, 0x0b)),
-        Item(u"ref_inf", 0xfe,           Info(0x82, 0x1e, 0x00, 0x64)),
+        #Item(u"ref_inf", 0xfe,           Info(0x82, 0x1e, 0x00, 0x64)),
         Item(u"ref_att_loc", 0xfe,       Info(0x82, 0x1e, 0x00, 0x64)),
         Item(u"ref_loc", 0x80,           Info(0x80, None, None, None)),
         Item(u"q_kn1", 0x80,             Info(0x82, 0x17, 0x00, 0x0c)),
@@ -96,7 +96,7 @@ DATA_POOL = { # This dictionary is used to 'simulate' communication.
         Item(u"stop_alarm1", 0x80,       Info(0x81, None, None, None)),
         Item(u"t_w", 0x80,               Info(0x82, 0x15, 0x00, 0xfe)),
         Item(u"ind_alarm", 0x81,         Info(0x81, None, None, None)),
-        Item(u"contr_ref", 0x80,         Info(0x80, None, None, None)),
+        #Item(u"contr_ref", 0x80,         Info(0x80, None, None, None)),
         Item(u"t_m", 0x80,               Info(0x82, 0x15, 0x00, 0xfe)),
         Item(u"surv_alarm1", 0x80,       Info(0x81, None, None, None)),
         Item(u"t_e", 0x80,               Info(0x80, None, None, None)),
@@ -138,8 +138,8 @@ DATA_POOL = { # This dictionary is used to 'simulate' communication.
         Item(u"START",           None,   Info(None, None, None, None)),
         Item(u"REMOTE",          None,   Info(None, None, None, None)),
         Item(u"LOCAL",           None,   Info(None, None, None, None)),
-        Item(u"RUN",             None,   Info(None, None, None, None)),
-        Item(u"PROGRAM",         None,   Info(None, None, None, None)),
+        #Item(u"RUN",             None,   Info(None, None, None, None)),
+        #Item(u"PROGRAM",         None,   Info(None, None, None, None)),
         Item(u"CONST_FREQ",      None,   Info(None, None, None, None)),
         Item(u"PROP_PRESS",      None,   Info(None, None, None, None)),
         Item(u"CONST_PRESS",     None,   Info(None, None, None, None)),
@@ -151,7 +151,7 @@ DATA_POOL = { # This dictionary is used to 'simulate' communication.
         Item(u"REF_DOWN",        None,   Info(None, None, None, None)),
         Item(u"RESET_HIST",      None,   Info(None, None, None, None)),
         Item(u"RESET_ALARM_LOG", None,   Info(None, None, None, None)),
-        Item(u"AUTOADAPT",       None,   Info(None, None, None, None)),
+        #Item(u"AUTOADAPT",       None,   Info(None, None, None, None)),
         Item(u"NIGHT_REDUCT_E+", None,   Info(None, None, None, None)),
         Item(u"NIGHT_REDUCT_D+", None,   Info(None, None, None, None)),
     },
